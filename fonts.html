@@ -18,7 +18,8 @@
 
     <title>designGNV</title>
   </head>
-<!-- Start some CSS edits for the jumbotron (the hero image with the statGNV title) and the background for the header and footer following the city's color guidelines.-->
+    
+<!-- CSS Edits-->
 <style>
 .jumbotron {
       background: #1DC2AE;
@@ -51,8 +52,8 @@ cog-white {
     padding-top: 2rem;
     }
    
-.bg-header{
-    background: #E0F7F6  !important;    
+.bg-section1{
+    background: #FFF !important;    
     }
     
 .bg-section2{
@@ -75,9 +76,16 @@ a:visited{
 .img_circle {
   border-radius: 50%;
 }
+
+.btn-participate {
+        background-color: #FF7C68 !important;
+        color: white !important;
+    }
+    
     
 </style>
 <!-- End CSS edits. -->
+    
 <body>
 <!-- This is where the temporary blue bar for myGNV beta starts: -->
 <nav class="container-fluid bg-beta" style="height: 1.7rem">
@@ -111,12 +119,14 @@ a:visited{
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle cog-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Resources
+                Design Resources
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                   <a class="dropdown-item" href="design-guide.html">Design Guide</a>
+                   <a class="dropdown-item" href="colors.html">Colors</a>
                    <div class="dropdown-divider"></div>
-                   <a class="dropdown-item" href="feedback.html">Feedback Opportunities</a>
+                   <a class="dropdown-item" href="fonts.html">Fonts</a>
+                   <div class="dropdown-divider"></div>
+                   <a class="dropdown-item" href="icons.html">Icons</a>
                 </div>
 
       </li>
@@ -124,297 +134,47 @@ a:visited{
   </div>
 </nav>
 <!-- This is where the site's navbar ends. -->
-    
-    
-<!--Header-->
-<div class="container-fluid m-0 bg-header">
-  <div class="text-center">
+
+<div class="container-fluid m-0 text-center">   
     <br><br>
-      <h1>Design Guidelines</h1>
-    <br><br><br>
-  </div>
-  <div class="row">
-    <div class="col-sm-2">
-    </div>
-    <div class="col-sm-2">
-        <div class="card text-center bg-header border-0" href="#section1">
-        <a href="#section1">
-            <i class="fal fa-palette fa-5x" aria-hidden="true"></i> 
-            <br><br>
-            <h4>Colors</h4>
-        </a>
-            <br><br>
-        </div>
-    </div> 
-    <div class="col-sm-1">
-    </div>
-    <div class="col-sm-2">
-        <div class="card text-center bg-header border-0" href="#section1">
-        <a href="#section2">
-            <i class="fal fa-font-case fa-5x" aria-hidden="true"></i> 
-            <br><br>
-            <h4>Fonts</h4>
-        </a>
-            <br><br>
+    <div class="row ml-5 mr-5 text-center">
+          <br>
+        <div class="col-sm text-center">
+          <h1 class="text-center">City of Gainesville Font Guidelines</h1>
         </div>
     </div>
-    <div class="col-sm-1">
-    </div>
-    <div class="col-sm-2">
-        <div class="card text-center bg-header border-0" href="#section1">
-        <a href="#section3">
-            <i class="fal fa-icons fa-5x" aria-hidden="true"></i> 
-            <br><br>
-            <h4>Icons</h4>
+
+<br><br><br>
+    
+    <div class="row ml-5">
+     <div class="col-sm-1"></div>
+       <div class="col-sm-5 text-left"> 
+        <img src="img/national-font.png" width="400" class="img-fluid" alt="Font Examples">
+        <br><br>
+        <img src="img/national-example.png" width="350"class="img-fluid" alt="Font Examples">
+        <br><br><br>
+        <a class="btn btn-warning" href="" target="_blank">
+              <span class="text-center">Download National Font</span>
         </a>
-            <br><br>
         </div>
+        <br><br><br>
+        <div class="col-sm-5 text-left"> 
+        <img src="img/publico-font.png" width="375" class="img-fluid" alt="Font Examples">
+        <br><br><br>
+        <img src="img/publico-example.png" width="75"class="img-fluid" alt="Font Examples">
+        <br><br><br><br><br><br><br>
+        <a class="btn btn-warning text-center" href="" target="_blank">
+              <span class="text-center">Download Publico Font</span>
+        </a>
+        </div>
+        <div class="col-sm-1"></div>
     </div>
-    <div class="col-sm-2">
-    </div>
-  </div>
 </div>
-<!--End Header-->
-    
-
-
     
     
-<!--First Row-->
-<div class="container-fluid m-0 bg-section1 text-center">   
-    <br><br>
-    <div class="row ml-5 mr-5 text-center" id="section1">
-          <br>
-        <div class="col-sm text-center">
-          <h2 class="text-center">Colors</h2>
-        </div>
-    </div>
-    
-    
-    <h4 class="text-left margins2">Digital Color Palette</h4>
-       <p class="text-left margins2">The Digital Color palette is slightly different than the City of Gainesville official brand colors and the Department of Doing brand colors. We have migrated the official colors to similar colors in the USWDS2.0 color system token chart. Each color now has a number associated to it. These numbers will help you attain proper contrast ratios for accessibility and ADA compliance. Please read about the USWDS2.0 Magic Number below for more information.</p>
-
-    <h5 class="text-left margins2">USWDS2.0 Magic Number</h5>
-      <p class="text-left margins2">Always use the USWDS2.0 color equivalent of a brand color to ensure appropriate contrast ratios. <a href="https://v2.designsystem.digital.gov/design-tokens/color/system-tokens/">Link for more information.</a>
-    <br><br>
-          We call the difference in grade between any two colors the magic number. Magic numbers have important contrast implications:</p>
-    <ul class="text-left margins2"><ul><ul>
-        <li>A magic number of 40+ results in WCAG 2.0 AA Large Text contrast (example: gray-90 and indigo-warm-50v).
-        <li>A magic number of 50+ results in WCAG 2.0 AA contrast or AAA Large Text contrast (example: gray-90 and red-40).
-        <li>A magic number of 70+ results in WCAG 2.0 AAA contrast (example: gray-10 and red-80).
-        <li>Colors of grade 50 result in Section 508 AA contrast against both pure white (grade 0) and pure black (grade 100).
-        </ul></ul></ul>
-    <p class="text-left margins2">Use USWDS magic numbers to choose accessible color combinations from any palette and color family.</p>
-        
-    
-    <img src="img/magicnumber.jpg" width="600" height="500" class="img-fluid" alt="Magic Number">
-    
-    
-    <h5 class="text-left margins2">Magic Number Example</h5>
-      <p class="text-left margins2">Here is an example of how to use it:
-    <br><br>
-          Our primary brand color is teal. The USWDS2.0 name for that color is: "mint-cool-30v"</p>
-    <ul class="text-left margins2"><ul><ul>
-        <li>Let's imagine you want to use that as the background for a block of text.</li>
-        <li>We know that we want a "Magic Number" to be 70 or above.</li>
-        <li>If we use white font (score of 0) on the teal (score of 30), then the difference between 0 and 30 is 30. 30 does not pass any WCAG accessibility standards.</li>
-        <li>If we use black font (score of 100) on the teal (score of 30), then the difference between 30 and 100 is 70. 70 passes all levels of WCAG accessibility standards.</li>
-        <li>You should use black font on the teal background (even if you like how the white font looks better).</li>
-        </ul></ul></ul>
-    <img src="img/magicnumber-example.jpg" width="600" height="500" class="img-fluid" alt="Magic Number Example">
-
-    <br><br>
-    
-    <h5 class="text-left margins2">Color Guidelines</h5>
-      <p class="text-left margins2">The City of Gainesville digital brand aesthetic is focused on minimalism and accessibility. Visual design should support communication and usability.  If you have any questions about visual design, please reach out to Jacqueline Stetson. 
-    <h5 class="text-left margins2">UI Colors</h5>
-    <h6 class="text-left margins2">Primary UI Colors</h6>
-        <p class="text-left margins2">Use teal, navy, and cool grays as your starting point for visual designs.</p>
-    <img src="img/mintblue.png" width="900" height="500" class="img-fluid" alt="Mint and Cool Blue colors">
-    
-    <h6 class="text-left margins2">Secondary UI Colors</h6>
-        <p class="text-left margins2">Use secondary colors sparingly for call-to-actions, status, segmentation, borders, etc. Right now, we have a large secondary palette because it is merged City of Gainesville, Department of Doing, and UI needs. This section will be refined based on needs, but for now, you have a HEX value for each color of the rainbow.  Contact Jacqueline for guidance on what colors to use when. </p>
-    <img src="img/colors.jpg" width="900" height="500" class="img-fluid" alt="Multiple Colors">
-    
-    <h6 class="text-left margins2">Tertiary UI Colors</h6>
-        <p class="text-left margins2">Use lighter hues as needed for rollovers, gradients, segmentation, etc. These are lighter shades of the secondary colors. Don't mix and match or use a tertiary color instead of our primary brand colors (teal and navy).</p>
-    <img src="img/allcolors.png" width="900" height="500" class="img-fluid" alt="All Colors">
-    
-    <h6 class="text-left margins2">Cool Gray Neutrals</h6>
-        <p class="text-left margins2">Use cool grays for backgrounds, borders, etc.</p>
-    <img src="img/grayneutrals.png" width="900" height="500" class="img-fluid" alt="Gray Neutrals">
-    
-    <h6 class="text-left margins2">Font Colors</h6>
-        <p class="text-left margins2">Make sure that you are following the Magic Number rule for contrast ratios. Colors with 40 and below, use Black font (#000000). Colors with 50 and above, use White font (#FFFFFF). Goal is to have a Magic Number of 70 or above.</p>
-    <img src="img/fontcolors.png" width="900" height="500" class="img-fluid" alt="Gray Neutrals">
-    
-    <h6 class="text-left margins2">Snapshot of Color Palette</h6>
-    <img src="img/colors-accessible.jpg" width="900" height="500" class="img-fluid" alt="Gray Neutrals">
-    
-    </div>
-<!--End First Row-->
-    
+    <br><br><br><br>
 
     
-<!--Second Row-->
-    
-<div class="container-fluid m-0 bg-section2">  
-    <br><br>
-    <div class="row ml-5 mr-5" id="section2">
-          <br>
-        <div class="col-sm text-center">
-          <h2>Fonts</h2>
-        </div>
-          <br>
-    </div>
-    <br>    
-  <div class="row ml-5 mr-5">
-    <div class="col-sm">
-     <div class="card bg-info h-100" outline-color: #0F191c>
-            <div class="card h-100">
-            <div class="ml-5 mr-5 mt-5">                       
-             <div class="col-sm">            
-                 <p class="card-text text-center">The City of Gainesville fonts are Publico and National. You can download them <a href="https://gruadmin.sharepoint.com/sites/GGStrategicInitiatives-Team/Shared%20Documents/Design/RESOURCES/Fonts" style="color: blue" target="_blank">here.</a></p>
-             <br><br> 
-            </div>
-            </div>
-            </div>
-        </div>
-      </div>
-      </div>
-    <br><br>
-  </div>
-<!--End Second Row-->
-    
-    
-<!--Third Row-->
-<div class="container-fluid m-0 bg-section3"> 
-    <br><br>
-    <div class="row ml-5 mr-5" id="section3">
-          <br>
-        <div class="col-sm text-center">
-          <h2>Icons</h2>
-        </div>
-    </div>   
-  <br>
-    <div>
-        <p class="text-center">Click on the icon you wish to download. It will open in a new page, then right click and save the file in your desired location.</p>
-    </div>
-    <br><br>
-    <div class="row ml-3"> 	
-    <div class="col-sm"></div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm"></div>
-    </div>
-    
-    <br><br>
-    
-    <div class="row ml-3"> 	
-    <div class="col-sm"></div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-    </div>
-    <div class="col-sm"></div>
-    </div>
-       <br><br>  
-</div> 
-<!--End Third Row-->
 
     
 <!--Footer-->      
