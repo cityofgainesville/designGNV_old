@@ -14,6 +14,17 @@
 	<!-- Start FontAwesome Kit -->
 	<script src="https://kit.fontawesome.com/7c02223738.js" crossorigin="anonymous"></script>
 	<!-- End FontAwesome Kit. -->
+      
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163304507-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-163304507-1');
+      </script>
+
     
 
     <title>designGNV</title>
@@ -63,6 +74,7 @@ cog-white {
     
 a:link{
     color: black;
+    background: #fff;
     }
 
 a:hover{
@@ -82,20 +94,209 @@ a:visited{
         color: white !important;
     }
     
+.esther_pink {
+    color: #FD7681;
+    }
+    
+.esther_purple {
+    color: #6C6EA0;
+    }
+    
+.esther_orange {
+    color: #F08717;
+    }
+    
+.esther_red {
+    color: #E75614;
+    }
+
+.esther_bluelight {
+    color: #59B9DE;
+    }
+
+.esther_bluedark {
+    color: #2364AA;
+    }
+
+.esther_yellow {
+    color: #FACE00;
+    }
+    
+    
+.esther_pink_bg {
+    background: #FD7681;
+    }
+    
+.esther_purple_bg {
+    background: #6C6EA0;
+    }
+    
+.esther_orange_bg {
+    background: #F08717;
+    }
+    
+.esther_red_bg {
+    background: #E75614;
+    }
+
+.esther_bluelight_bg {
+    background: #59B9DE;
+    }
+
+.esther_bluedark_bg {
+    background: #2364AA;
+    }
+
+.esther_yellow_bg {
+    background: #FACE00;
+    }
+    
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides2 {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
     
 </style>
+    
 <!-- End CSS edits. -->
+
+<!--JS edits-->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides" "myslides2");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    
+</script>
+
+
+    
+<!--End JS edits-->
     
 <body>
 <!-- This is where the temporary blue bar for myGNV beta starts: -->
-<nav class="container-fluid bg-beta" style="height: 1.7rem">
+<div class="container-fluid bg-beta" style="height: 1.7rem">
   <span class="text-left" style="color: white">
-	  <p class="font-italic"><strong>designGNV Beta </strong><a href="mailto:designGNV@cityofgainesville.org" style="color: white; text-decoration: underline">Email us</a> with feedback.</p>
+	  <p class="font-italic"><strong>designGNV Beta </strong><a href="mailto:designGNV@cityofgainesville.org" style="color: white; text-decoration: underline; background: none !important;">Email us</a> with feedback.</p>
   </span>
-</nav>
+</div>
 <!-- This is where the temporary blue bar ends and the site's navbar starts: -->
-<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="index.html"><h4 style="font-weight: bolder; font-color: white;">designGNV</h4></a>
+<div id="navbar" class="navbar border-bottom border-info navbar-expand-lg">
+  <a href="index.html"><img src="img/logo-main.png" width="150rem"  class="img-fluid"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -114,9 +315,6 @@ a:visited{
                    <a class="dropdown-item" href="methodology.html">Our Methodology</a>
                 </div>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="careers.html">Work With Us</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle cog-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Design Resources
@@ -127,14 +325,15 @@ a:visited{
                    <a class="dropdown-item" href="fonts.html">Fonts</a>
                    <div class="dropdown-divider"></div>
                    <a class="dropdown-item" href="icons.html">Icons</a>
+                   <div class="dropdown-divider"></div>
+                   <a class="dropdown-item" href="xgnv.html">XGNV Brand &amp; Logos</a>
                 </div>
 
       </li>
     </ul>
   </div>
-</nav>
+</div>
 <!-- This is where the site's navbar ends. -->
-    
     
     
 <!--Third Row-->
@@ -161,47 +360,71 @@ a:visited{
         
     </div>
     <br><br>
+    
+
+    <script>    
+        function myFunction() {
+            var copyText = document.getElementById("myCode");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        alert("Copied the text: " + copyText.value);
+            }
+    </script>
+    
+    
     <div class="row ml-3 text-center"> 	
     <div class="col-sm"></div>
     <div class="col-sm-2">
       <a href="img/city-light.svg" download target="_blank"> 
         <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
       </a>
-      <br>
-      <p>&lt;i class="fal fa-city"&gt;&lt;/i&gt;</p>
+      <br><br>
+      <button class="btn btn-info" style="width: 10rem" href=""><i class="fa fa-download"></i> Download png</button>
+    <br><br>
+      <button class="btn btn-success" style="width: 10rem" href=""><i class="fa fa-download"></i> Copy HTML</button>
+    </div>
+    <br><br>
+    <div class="col-sm-2">
+      <a href="img/city-light.svg" download target="_blank"> 
+        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
+      </a>
+      <br><br>
+      <button class="btn btn-info" style="width: 10rem" href=""><i class="fa fa-download"></i> Download png</button>
+    <br><br>
+      <button class="btn btn-success" style="width: 10rem" href=""><i class="fa fa-download"></i> Copy HTML</button>
     </div>
     <div class="col-sm-2">
       <a href="img/city-light.svg" download target="_blank"> 
         <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
       </a>
-      <br>
-      <p>&lt;i class="fal fa-city"&gt;&lt;/i&gt;</p>
+      <br><br>
+      <button class="btn btn-info" style="width: 10rem" href=""><i class="fa fa-download"></i> Download png</button>
+    <br><br>
+      <button class="btn btn-success" style="width: 10rem" href=""><i class="fa fa-download"></i> Copy HTML</button>
     </div>
     <div class="col-sm-2">
       <a href="img/city-light.svg" download target="_blank"> 
         <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
       </a>
-      <br>
-      <p>&lt;i class="fal fa-city"&gt;&lt;/i&gt;</p>
+      <br><br>
+      <button class="btn btn-info" style="width: 10rem" href=""><i class="fa fa-download"></i> Download png</button>
+    <br><br>
+      <button class="btn btn-success" style="width: 10rem" href=""><i class="fa fa-download"></i> Copy HTML</button>
     </div>
     <div class="col-sm-2">
       <a href="img/city-light.svg" download target="_blank"> 
         <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
       </a>
-      <br>
-      <p>&lt;i class="fal fa-city"&gt;&lt;/i&gt;</p>
-    </div>
-    <div class="col-sm-2">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-      <br>
-      <p>&lt;i class="fal fa-city"&gt;&lt;/i&gt;</p>
+      <br><br>
+      <button class="btn btn-info" style="width: 10rem" href=""><i class="fa fa-download"></i> Download png</button>
+    <br><br>
+      <button class="btn btn-success" style="width: 10rem" href=""><i class="fa fa-download"></i> Copy HTML</button>
     </div>
     <div class="col-sm"></div>
     </div>
     
-    <br><br>
+    <br><br><br>
     
      <div class="row ml-3 text-center"> 	
     <div class="col-sm"></div>
@@ -209,36 +432,47 @@ a:visited{
       <a href="img/city-light.svg" download target="_blank"> 
         <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
       </a>
-      <br>
-      <p>&lt;i class="fal fa-city"&gt;&lt;/i&gt;</p>
+      <br><br>
+      <button class="btn btn-info" style="width: 10rem" href=""><i class="fa fa-download"></i> Download png</button>
+    <br><br>
+      <button class="btn btn-success" style="width: 10rem" href=""><i class="fa fa-download"></i> Copy HTML</button>
+    </div>
+    <br><br>
+    <div class="col-sm-2">
+      <a href="img/city-light.svg" download target="_blank"> 
+        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
+      </a>
+      <br><br>
+      <button class="btn btn-info" style="width: 10rem" href=""><i class="fa fa-download"></i> Download png</button>
+    <br><br>
+      <button class="btn btn-success" style="width: 10rem" href=""><i class="fa fa-download"></i> Copy HTML</button>
     </div>
     <div class="col-sm-2">
       <a href="img/city-light.svg" download target="_blank"> 
         <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
       </a>
-      <br>
-      <p>&lt;i class="fal fa-city"&gt;&lt;/i&gt;</p>
+      <br><br>
+      <button class="btn btn-info" style="width: 10rem" href=""><i class="fa fa-download"></i> Download png</button>
+    <br><br>
+      <button class="btn btn-success" style="width: 10rem" href=""><i class="fa fa-download"></i> Copy HTML</button>
     </div>
     <div class="col-sm-2">
       <a href="img/city-light.svg" download target="_blank"> 
         <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
       </a>
-      <br>
-      <p>&lt;i class="fal fa-city"&gt;&lt;/i&gt;</p>
+      <br><br>
+      <button class="btn btn-info" style="width: 10rem" href=""><i class="fa fa-download"></i> Download png</button>
+    <br><br>
+      <button class="btn btn-success" style="width: 10rem" href=""><i class="fa fa-download"></i> Copy HTML</button>
     </div>
     <div class="col-sm-2">
       <a href="img/city-light.svg" download target="_blank"> 
         <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
       </a>
-      <br>
-      <p>&lt;i class="fal fa-city"&gt;&lt;/i&gt;</p>
-    </div>
-    <div class="col-sm-2">
-      <a href="img/city-light.svg" download target="_blank"> 
-        <img src="img/city-light.svg" width="50rem" height="50rem" alt="icon">
-      </a>
-      <br>
-      <p>&lt;i class="fal fa-city"&gt;&lt;/i&gt;</p>
+      <br><br>
+      <button class="btn btn-info" style="width: 10rem" href=""><i class="fa fa-download"></i> Download png</button>
+    <br><br>
+      <button class="btn btn-success" style="width: 10rem" href=""><i class="fa fa-download"></i> Copy HTML</button>
     </div>
     <div class="col-sm"></div>
     </div>
@@ -246,7 +480,7 @@ a:visited{
 </div> 
 <!--End Third Row-->
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
     
 <!--Footer-->      
     <nav class="navbar navbar-expand-lg">

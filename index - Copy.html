@@ -17,6 +17,8 @@
     
 
     <title>designGNV</title>
+      
+      
   </head>
     
 <!-- CSS Edits-->
@@ -85,6 +87,51 @@ a:visited{
     
 </style>
 <!-- End CSS edits. -->
+    
+<!--JS edits-->
+    <script>
+        var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}  
+    </script>
+<!-- End JS edits. -->
+    
+<!--JS edits-->
+<script>
+        var slideIndex = 1; showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+            }
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides2");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}  
+    </script>
+
+<!-- End JS edits. -->
+    
     
 <body>
 <!-- This is where the temporary blue bar for myGNV beta starts: -->
@@ -265,6 +312,40 @@ a:visited{
 <!--End Second Row-->
     
 <br><br>
+    
+    
+<!---Slideshow-->
+<div class="row text-center">
+<img class="mySlides" src="img/balloons.webp" width="500rem" height="400rem">
+<img class="mySlides" src="img/2working_stock.jpeg" width="500rem" height="400rem">
+<img class="mySlides" src="img/allcolors.png" width="500rem" height="400rem">
+<img class="mySlides" src="img/auditorlogo.png" width="500rem" height="400rem">
+    
+<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    </div>
+    
+ 
+<br><br><br><br><br><br> 
+    
+<!---Slideshow-->
+<div class="row text-center">
+
+<div class="w3-content w3-display-container text-center">
+  <img class="mySlides2 text-center" src="img/balloons.webp"  width="500rem" height="400rem">
+  <img class="mySlides2 text-center" src="img/2working_stock.jpeg"  width="500rem" height="400rem">
+  <img class="mySlides2 text-center" src="img/bdp.png"  width="500rem" height="400rem">
+  <div class="w3-center w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+    <br>
+    <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+    </div>
+       
     
 <!--Third Row-->
 <div class="container-fluid m-0 bg-section1">   

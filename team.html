@@ -14,6 +14,40 @@
 	<!-- Start FontAwesome Kit -->
 	<script src="https://kit.fontawesome.com/7c02223738.js" crossorigin="anonymous"></script>
 	<!-- End FontAwesome Kit. -->
+      
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163304507-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-163304507-1');
+      </script>
+      
+      
+      <script>
+          // When the user scrolls the page, execute myFunction
+            window.onscroll = function() {myFunction()};
+
+            // Get the navbar
+          var navbar = document.getElementById("navbar");
+
+          // Get the offset position of the navbar
+          var sticky = navbar.offsetTop;
+
+          // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+          function myFunction() {
+              if (window.pageYOffset >= sticky) {
+                  navbar.classList.add("sticky")
+              } else {
+                  navbar.classList.remove("sticky");
+              }
+            }   
+      
+      
+      </script>
+
     
 
     <title>designGNV</title>
@@ -82,20 +116,159 @@ a:visited{
         color: white !important;
     }
     
+.esther_pink {
+    color: #FD7681;
+    }
     
+.esther_purple {
+    color: #6C6EA0;
+    }
+    
+.esther_orange {
+    color: #F08717;
+    }
+    
+.esther_red {
+    color: #E75614;
+    }
+
+.esther_bluelight {
+    color: #59B9DE;
+    }
+
+.esther_bluedark {
+    color: #2364AA;
+    }
+
+.esther_yellow {
+    color: #FACE00;
+    }
+    
+    
+.esther_pink_bg {
+    background: #FD7681;
+    }
+    
+.esther_purple_bg {
+    background: #6C6EA0;
+    }
+    
+.esther_orange_bg {
+    background: #F08717;
+    }
+    
+.esther_red_bg {
+    background: #E75614;
+    }
+
+.esther_bluelight_bg {
+    background: #59B9DE;
+    }
+
+.esther_bluedark_bg {
+    background: #2364AA;
+    }
+
+.esther_yellow_bg {
+    background: #FACE00;
+    }
+
+    
+.slidecaption {
+     background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+.round_card1 {
+    border-radius: 50%;
+    border-color: #F08717; 
+    width: 15rem;
+    height: 25rem;    
+    }
+    
+.round_card2 {
+    border-radius: 50%;
+    border-color: #59B9DE; 
+    width: 15rem;
+    height: 25rem;    
+    }
+
+.round_card3 {
+    border-radius: 50%;
+    border-color: #FACE00; 
+    width: 15rem;
+    height: 25rem;    
+    }
+
+.orange_text {
+    color: #F08717;    
+    }
+    
+.blue_text {
+    color: #59B9DE;    
+    }
+    
+.yellow_text {
+    color: #FACE00;    
+    }
+
+    
+#navbar {
+  min-height: 48px;
+  background-color: #fff;
+  text-decoration-color: #fff;
+}
+
+#navbar b {
+  display: block;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  color: #59B9DE;
+}
+
+#navbar a.active {
+  color: white;
+}
+    
+    
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}    
+
+nav-link {
+    background: none;    
+    }    
+    
+
 </style>
+    
 <!-- End CSS edits. -->
+
+
     
 <body>
 <!-- This is where the temporary blue bar for myGNV beta starts: -->
-<nav class="container-fluid bg-beta" style="height: 1.7rem">
+<div class="container-fluid bg-beta" style="height: 1.7rem">
   <span class="text-left" style="color: white">
-	  <p class="font-italic"><strong>designGNV Beta </strong><a href="mailto:designGNV@cityofgainesville.org" style="color: white; text-decoration: underline">Email us</a> with feedback.</p>
+	  <p class="font-italic"><strong>designGNV Beta </strong><a href="mailto:designGNV@cityofgainesville.org" style="color: white; text-decoration: underline; background: none !important;">Email us</a> with feedback.</p>
   </span>
-</nav>
+</div>
 <!-- This is where the temporary blue bar ends and the site's navbar starts: -->
-<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="index.html"><h4 style="font-weight: bolder; font-color: white;">designGNV</h4></a>
+<div id="navbar" class="navbar border-bottom border-info navbar-expand-lg">
+  <a href="index.html"><img src="img/logo-main.png" width="150rem"  class="img-fluid"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -114,9 +287,6 @@ a:visited{
                    <a class="dropdown-item" href="methodology.html">Our Methodology</a>
                 </div>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="careers.html">Work With Us</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle cog-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Design Resources
@@ -127,12 +297,14 @@ a:visited{
                    <a class="dropdown-item" href="fonts.html">Fonts</a>
                    <div class="dropdown-divider"></div>
                    <a class="dropdown-item" href="icons.html">Icons</a>
+                   <div class="dropdown-divider"></div>
+                   <a class="dropdown-item" href="xgnv.html">XGNV Brand &amp; Logos</a>
                 </div>
 
       </li>
     </ul>
   </div>
-</nav>
+</div>
 <!-- This is where the site's navbar ends. -->
     
     
@@ -229,6 +401,23 @@ a:visited{
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap-4.3.1.js"></script>
+    
+    
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            }
+    </script>
+    
   </body>
 
 </html>

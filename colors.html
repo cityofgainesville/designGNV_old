@@ -14,6 +14,40 @@
 	<!-- Start FontAwesome Kit -->
 	<script src="https://kit.fontawesome.com/7c02223738.js" crossorigin="anonymous"></script>
 	<!-- End FontAwesome Kit. -->
+      
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163304507-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-163304507-1');
+      </script>
+      
+      
+      <script>
+          // When the user scrolls the page, execute myFunction
+            window.onscroll = function() {myFunction()};
+
+            // Get the navbar
+          var navbar = document.getElementById("navbar");
+
+          // Get the offset position of the navbar
+          var sticky = navbar.offsetTop;
+
+          // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+          function myFunction() {
+              if (window.pageYOffset >= sticky) {
+                  navbar.classList.add("sticky")
+              } else {
+                  navbar.classList.remove("sticky");
+              }
+            }   
+      
+      
+      </script>
+
     
 
     <title>designGNV</title>
@@ -82,20 +116,159 @@ a:visited{
         color: white !important;
     }
     
+.esther_pink {
+    color: #FD7681;
+    }
     
+.esther_purple {
+    color: #6C6EA0;
+    }
+    
+.esther_orange {
+    color: #F08717;
+    }
+    
+.esther_red {
+    color: #E75614;
+    }
+
+.esther_bluelight {
+    color: #59B9DE;
+    }
+
+.esther_bluedark {
+    color: #2364AA;
+    }
+
+.esther_yellow {
+    color: #FACE00;
+    }
+    
+    
+.esther_pink_bg {
+    background: #FD7681;
+    }
+    
+.esther_purple_bg {
+    background: #6C6EA0;
+    }
+    
+.esther_orange_bg {
+    background: #F08717;
+    }
+    
+.esther_red_bg {
+    background: #E75614;
+    }
+
+.esther_bluelight_bg {
+    background: #59B9DE;
+    }
+
+.esther_bluedark_bg {
+    background: #2364AA;
+    }
+
+.esther_yellow_bg {
+    background: #FACE00;
+    }
+
+    
+.slidecaption {
+     background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+.round_card1 {
+    border-radius: 50%;
+    border-color: #F08717; 
+    width: 15rem;
+    height: 25rem;    
+    }
+    
+.round_card2 {
+    border-radius: 50%;
+    border-color: #59B9DE; 
+    width: 15rem;
+    height: 25rem;    
+    }
+
+.round_card3 {
+    border-radius: 50%;
+    border-color: #FACE00; 
+    width: 15rem;
+    height: 25rem;    
+    }
+
+.orange_text {
+    color: #F08717;    
+    }
+    
+.blue_text {
+    color: #59B9DE;    
+    }
+    
+.yellow_text {
+    color: #FACE00;    
+    }
+
+    
+#navbar {
+  min-height: 48px;
+  background-color: #fff;
+  text-decoration-color: #fff;
+}
+
+#navbar b {
+  display: block;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  color: #59B9DE;
+}
+
+#navbar a.active {
+  color: white;
+}
+    
+    
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}    
+
+nav-link {
+    background: none;    
+    }    
+    
+
 </style>
+    
 <!-- End CSS edits. -->
+
+
     
 <body>
 <!-- This is where the temporary blue bar for myGNV beta starts: -->
-<nav class="container-fluid bg-beta" style="height: 1.7rem">
+<div class="container-fluid bg-beta" style="height: 1.7rem">
   <span class="text-left" style="color: white">
-	  <p class="font-italic"><strong>designGNV Beta </strong><a href="mailto:designGNV@cityofgainesville.org" style="color: white; text-decoration: underline">Email us</a> with feedback.</p>
+	  <p class="font-italic"><strong>designGNV Beta </strong><a href="mailto:designGNV@cityofgainesville.org" style="color: white; text-decoration: underline; background: none !important;">Email us</a> with feedback.</p>
   </span>
-</nav>
+</div>
 <!-- This is where the temporary blue bar ends and the site's navbar starts: -->
-<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="index.html"><h4 style="font-weight: bolder; font-color: white;">designGNV</h4></a>
+<div id="navbar" class="navbar border-bottom border-info navbar-expand-lg">
+  <a href="index.html"><img src="img/logo-main.png" width="150rem"  class="img-fluid"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -114,9 +287,6 @@ a:visited{
                    <a class="dropdown-item" href="methodology.html">Our Methodology</a>
                 </div>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="careers.html">Work With Us</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle cog-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Design Resources
@@ -127,12 +297,14 @@ a:visited{
                    <a class="dropdown-item" href="fonts.html">Fonts</a>
                    <div class="dropdown-divider"></div>
                    <a class="dropdown-item" href="icons.html">Icons</a>
+                   <div class="dropdown-divider"></div>
+                   <a class="dropdown-item" href="xgnv.html">XGNV Brand &amp; Logos</a>
                 </div>
 
       </li>
     </ul>
   </div>
-</nav>
+</div>
 <!-- This is where the site's navbar ends. -->
     
     
@@ -197,26 +369,1637 @@ a:visited{
     <h5 class="text-left margins2">UI Colors</h5>
     <h6 class="text-left margins2">Primary UI Colors</h6>
         <p class="text-left margins2">Use teal, navy, and cool grays as your starting point for visual designs.</p>
-    <img src="img/mintblue.png" width="900" height="500" class="img-fluid" alt="Mint and Cool Blue colors">
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #1dc2ae;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>mint-cool-30v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#1DC2AE</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>29, 194, 174</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$java</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #0F191C;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>blue-cool-90</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#0F191C</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>15, 25, 28</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$blue-dianne</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    
+    <br><br>
+    
     
     <h6 class="text-left margins2">Secondary UI Colors</h6>
         <p class="text-left margins2">Use secondary colors sparingly for call-to-actions, status, segmentation, borders, etc. Right now, we have a large secondary palette because it is merged City of Gainesville, Department of Doing, and UI needs. This section will be refined based on needs, but for now, you have a HEX value for each color of the rainbow.  Contact Jacqueline for guidance on what colors to use when. </p>
-    <img src="img/colors.jpg" width="900" height="500" class="img-fluid" alt="Multiple Colors">
+        
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #B51D09;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>red-60v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#B51D09</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>181, 29, 9</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$milano-red</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #E52207;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>red-50v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#E52207</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>229, 34, 7</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$scarlet</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FF580A;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>orange-warm-40v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FF580A</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>255, 88, 10</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$international-orange</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FACE00;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>yellow-20v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FACE00</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>250, 206, 0</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$gold</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #7E9C1D;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>green-warm-40v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#7E9C1D</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>126, 156, 29</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$trendy-green</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #59B9DE;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>blue-cool-30v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#59B9DE</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>89, 185, 222</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$shakespeare</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #074B69;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>blue-cool-70v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#074B69</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>7, 75, 105</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$teal-blue</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #676CC8;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>indigo-50</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#676CC8</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>103, 108, 200</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$moody-blue</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #8B1303;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>Kenyan Copper</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#8B1303</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>139, 19, 3</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$kenyan-copper</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    
+    <br><br>
+    
     
     <h6 class="text-left margins2">Tertiary UI Colors</h6>
         <p class="text-left margins2">Use lighter hues as needed for rollovers, gradients, segmentation, etc. These are lighter shades of the secondary colors. Don't mix and match or use a tertiary color instead of our primary brand colors (teal and navy).</p>
-    <img src="img/allcolors.png" width="900" height="500" class="img-fluid" alt="All Colors">
+    
+    
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #8B1303;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>red-70v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#8B1303</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>139, 19, 3</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$kenyan-copper</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #B51D09;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>red-60v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#B51D09</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>181, 29, 9</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$milano-red</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #E52207;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>red-50v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#E52207</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>229, 34, 7</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$scarlet</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FDB8AE;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>red-50v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FDB8AE</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>253, 184, 174</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$melon</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FDE0DB;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>red-10v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FDE0DB</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>253, 224, 219</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$cinderella</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FF580A;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>orange-warm-40v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FF580A</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>255, 88, 10</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$international-orange</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FBBAA7;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>orange-warm-20v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FBBAA7</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>251, 186, 167</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$rose-bud</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FBE0D0;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>orange-warm-10</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FBE0D0</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>251, 224, 208</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$apricot-peach</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FAEEE5;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>orange-warm-5</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FAEEE5</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>250, 238, 229</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$linen</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FACE00;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>yellow-20v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FACE00</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>250, 206, 0</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$gold</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FEE685;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>yellow-10v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FEE685</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>254, 230, 133</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$kournikova</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #7E9C1D;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>green-warm-40v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#7E9C1D</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>126, 156, 29</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$forest-green</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #E7EAB7;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>green-warm-10</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#E7EAB7</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>231, 234, 183</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$madang</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #F1F4D7;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>green-warm-5</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#F1F4D7</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>241, 244, 215</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$peppermint</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #F1F4D7;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>green-warm-5</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#F1F4D7</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>241, 244, 215</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$peppermint</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #6FBAB3;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>mint-cool-30</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#6FBAB3</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>111, 186, 179</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$tradewind</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #98D4CF;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>mint-cool-20</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#98D4CF</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>155, 212, 207</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$sinbad</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #C4EEEB;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>mint-cool-10</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#C4EEEB</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>196, 238, 235</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$iceberg</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #E0F7F6;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>mint-cool-5</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#E0F7F6</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>224, 247, 246</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$polar</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #59B9DE;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>blue-cool-30v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#59B9DE</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>89, 185, 222</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$shakespeare</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #97D4EA;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>blue-cool-20v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#97D4EA</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>151, 212, 234</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$cornflower</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #E1F3F8;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>blue-cool-5v</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#E1F3F8</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>225, 243, 248</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$blizzard-blue</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #676CC8;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>indigo-50</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#676CC8</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>103, 108, 200</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$moody-blue</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #C5C5F3;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>indigo-20</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#C5C5F3</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>197, 197, 243</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$moon-raker</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #E5E4FA;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>indigo-10</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#E5E4FA</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>229, 228, 250</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$moon-raker-1</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #EFEFF8;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>indigo-5</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#EFEFF8</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>239, 239, 248</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$white-lilac</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    
+    
+    
     
     <h6 class="text-left margins2">Cool Gray Neutrals</h6>
         <p class="text-left margins2">Use cool grays for backgrounds, borders, etc.</p>
-    <img src="img/grayneutrals.png" width="900" height="500" class="img-fluid" alt="Gray Neutrals">
+
+    
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FBFCFD;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-1</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FBFCFD</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>251, 252, 253</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$athens-gray</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #F7F9FA;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-2</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#F7F9FA</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>247, 249, 250</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$porcelain</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #F5F6F7;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-3</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#F5F6F7</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>245, 246, 247</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$athens-gray-1</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #F1F3F6;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-4</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#F1F3F6</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>241, 243, 246</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$athens-gray-2</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #EDEFF0;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-5</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#EDEFF0</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>237, 239, 240</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$porcelain-1</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #DCDEE0;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-10</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#DCDEE0</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>220, 222, 224</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$iron</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #C6CACE;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-20</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#C6CACE</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>198, 202, 206</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$iron-1</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #A9AEB1;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-30</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#A9AEB1</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>169, 174, 177</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$hit-gray</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #8D9297;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-40</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#8D9297</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>141, 146, 151</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$oslo-gray</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #71767A;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-50</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#71767A</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>113, 118, 122</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$rolling-stone</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #565C65;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-60</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#565C65</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>86, 92, 101</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$shuttle-gray</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #3D4551;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-70</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#3D4551</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>61, 69, 81</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$river-bed</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #2D2E2F;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-80</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#2D2E2F</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>45, 46, 47</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$shark</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #1C1D1F;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>gray-cool-90</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#1C1D1F</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>28, 29, 31</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$shark-1</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    
+    
+    
+    
     
     <h6 class="text-left margins2">Font Colors</h6>
         <p class="text-left margins2">Make sure that you are following the Magic Number rule for contrast ratios. Colors with 40 and below, use Black font (#000000). Colors with 50 and above, use White font (#FFFFFF). Goal is to have a Magic Number of 70 or above.</p>
-    <img src="img/fontcolors.png" width="900" height="500" class="img-fluid" alt="Gray Neutrals">
+
+    
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #000000;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>Black-100</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#000000</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>0, 0, 0</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$black</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm" align="right">
+            <div align="right" style="width: 5rem; height: 3rem; background: #FFFFFF;"></div>
+        </div>
+        <div class="col-sm" align="left">
+            <h6>White-0</h6>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>HEX</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>#FFFFFF</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>RGB</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>255, 255, 255</p>
+        </div>
+        <div class="col-sm" align="right">
+            <button type="button" class="btn btn-light" disabled>SCSS</button>
+        </div>
+        <div class="col-sm" align="left">
+            <p>$white</p>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+    <hr width="75%">
     
     <h6 class="text-left margins2">Snapshot of Color Palette</h6>
-    <img src="img/colors-accessible.jpg" width="900" height="500" class="img-fluid" alt="Gray Neutrals">
+    <br><br>
+    <img src="img/colors-accessible.jpg" width="1200" height="600" class="img-fluid" alt="Gray Neutrals">
     
     </div>
 <!--End First Row-->
@@ -251,6 +2034,23 @@ a:visited{
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap-4.3.1.js"></script>
+    
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            }
+    </script>
+    
+    
   </body>
 
 </html>
